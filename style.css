@@ -10,6 +10,17 @@
   object-fit: cover;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+}
+.header .logo {
+  width: 30px;
+  height: 30px;
+}
+
 .navbar {
   padding: 30px 24px;
   border-radius: 12px;
