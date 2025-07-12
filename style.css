@@ -12,21 +12,21 @@
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
 }
-.header .logo {
-  width: 30px;
-  height: 30px;
+
+.logo {
+  width: 40px;
+  height: auto;
 }
 
 .navbar {
-  padding: 30px 24px;
-  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .navbar ul {
@@ -35,6 +35,8 @@
   padding: 0;
   display: flex;
   gap: 24px;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar li a {
@@ -44,11 +46,6 @@
   font-size: 18px;
   padding: 12px 24px;
   border-radius: 6px;
-}
-
-.navbar li a:hover,
-.navbar li a.active {
-  color: #40404073;
 }
 
 @media (max-width: 600px) {
