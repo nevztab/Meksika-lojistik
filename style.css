@@ -1,3 +1,4 @@
+/* Arka plan video */
 #myVideo {
   position: fixed;
   top: 0;
@@ -5,33 +6,29 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
+/* Header yapısı */
 .header {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
 }
 
+/* Logo sabit solda */
 .logo {
   width: 50px;
   height: auto;
+  flex-shrink: 0;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-}
-
+/* Navbar ortalanmış */
 .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar ul {
@@ -58,6 +55,7 @@
   color: #40404073;
 }
 
+/* İçerik alanı */
 .container {
   position: relative;
   z-index: 1;
@@ -68,6 +66,7 @@
   color: #fff;
 }
 
+/* Footer */
 footer {
   color: #fff;
   text-align: center;
@@ -79,15 +78,24 @@ footer {
   z-index: 10;
 }
 
+/* Mobil uyum */
 @media (max-width: 600px) {
-  .navbar {
-    padding: 16px 8px;
-  }
-  .navbar ul {
-    flex-direction: flex;
-    gap: 8px;
+  .header {
+    flex-direction: column;
     align-items: center;
   }
+
+  .navbar {
+    position: static;
+    transform: none;
+    margin-top: 12px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .navbar li a {
     font-size: 16px;
     padding: 10px 16px;
