@@ -17,6 +17,12 @@
   
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+
+}
+
 .navbar {
   padding: 30px 24px;
   border-radius: 12px;
