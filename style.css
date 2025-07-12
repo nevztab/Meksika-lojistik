@@ -10,7 +10,7 @@
     object-fit: cover;
 }
 
-ul {
+.navbar {
     
     list-style-type: none;
     margin: 0;
@@ -20,21 +20,22 @@ ul {
     opacity: 0.6;
 }
 
-li {
+.liste {
     float: left;
+    opacity: 1;
     
 }
 
-li a {
+.liste a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    opacity: 1;
+    
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.liste a:hover {
   background-color: #111;
 }
