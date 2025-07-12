@@ -58,6 +58,16 @@
   color: #40404073;
 }
 
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 150px 0 80px 100px; 
+  padding: 32px 32px 32px 40px;
+  font-size: 20pt;
+  color: #fff;
+}
+
 footer {
   
   color: #fff;
