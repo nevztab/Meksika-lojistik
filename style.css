@@ -92,7 +92,7 @@ footer {
   }
 
   .navbar ul {
-    flex-direction: column;
+    flex-direction: flex;
     gap: 8px;
   }
 
