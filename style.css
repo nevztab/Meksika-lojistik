@@ -48,6 +48,11 @@
   border-radius: 6px;
 }
 
+.navbar li a:hover,
+.navbar li a.active {
+  color: #40404073;
+}
+
 @media (max-width: 600px) {
   .navbar {
     padding: 16px 8px;
