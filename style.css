@@ -16,8 +16,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.2); /* arka planı yarı saydam yaparak içeriklerin üstünde okunaklı kalır */
-  backdrop-filter: blur(4px);
+  
   display: flex;
   align-items: center;
   padding: 16px 24px;
