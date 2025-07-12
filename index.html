@@ -8,26 +8,37 @@
   </head>
   <body>
     <header class="header">
-      <img src="meksikalogo.png" alt="Meksika Lojistik Logo" class="logo" />
-      
-      <nav class="navbar">
+      <a href="/" class="logo-link">
+        <img
+          src="meksikalogo.png"
+          alt="Meksika Lojistik Ana Sayfa"
+          class="logo"
+        />
+      </a>
+
+      <nav class="navbar" aria-label="Ana Gezinme">
         <ul>
-          <li><a href="#">Ana Sayfa</a></li>
-          <li><a href="#">Hakkında</a></li>
-          <li><a href="#">İletişim</a></li>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li><a href="/hakkinda.html">Hakkında</a></li>
+          <li><a href="/iletisim.html">İletişim</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div class="container">
+      <section class="container">
         <h1>Meksika Lojistik</h1>
-        <p>Bu, Meksika lojistik hizmetleri hakkında bir web sayfasıdır.</p>
-      </div>
-      <video autoplay muted loop id="myVideo">
+        <p>
+          Güvenilir, Hızlı ve Kapsamlı Lojistik Çözümleriniz İçin Buradayız.
+        </p>
+      </section>
+
+      <video autoplay muted loop id="myVideo" playsinline>
         <source src="bg.mp4" type="video/mp4" />
+        Tarayıcınız video etiketini desteklemiyor.
       </video>
     </main>
+
     <footer>
       <p>&copy; 2025 Meksika Lojistik. Tüm hakları saklıdır.</p>
     </footer>
