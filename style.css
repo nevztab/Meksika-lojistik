@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: #00695c;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+nav {
+    background: #004d40;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+h2 {
+    color: #00695c;
+}
+
+.services {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1 1 250px;
+    background: #e0f2f1;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    margin-top: 30px;
+}
+
+img.logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
