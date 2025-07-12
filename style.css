@@ -10,6 +10,13 @@
   object-fit: cover;
 }
 
+.logo {
+  width: 75px;
+  height: auto;
+  margin-right: 20px;
+  
+}
+
 .navbar {
   padding: 30px 24px;
   border-radius: 12px;
