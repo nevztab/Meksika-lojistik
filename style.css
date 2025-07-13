@@ -7,6 +7,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Arka plan video */
@@ -27,26 +29,27 @@ body {
   z-index: 100;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 24px;
-  background: transparent;
+  background: transparent; /* Şeffaf bırakın */
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  flex-wrap: wrap;
 }
 
-/* Scroll sonrası blur */
 .header.scrolled {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px); /* Daha belirgin blur için artırıldı */
+  -webkit-backdrop-filter: blur(6px);
 }
 
-/* Logo solda */
+/* Logo */
 .logo {
   width: 50px;
   height: auto;
   flex-shrink: 0;
 }
 
-/* Navbar ortada */
+/* Navbar */
 .navbar {
   position: absolute;
   left: 50%;
@@ -106,9 +109,70 @@ footer {
   z-index: 10;
 }
 
-@media (max-width: 600px) {
+/* Kartlar */
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 550px;
+  height: 550px;
+  perspective: 1000px;
+  flex: 1 1 300px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #222;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
   .header {
-    flex-direction: flex;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -119,8 +183,9 @@ footer {
   }
 
   .navbar ul {
-    flex-direction: flex;
+    flex-direction: column;
     gap: 8px;
+    align-items: center;
   }
 
   .navbar li a {
@@ -131,81 +196,28 @@ footer {
   .container {
     margin: 100px 16px;
     font-size: 16pt;
+    text-align: center;
   }
-}
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  border-radius: 24px;
-  overflow: hidden;
-}
+  .container p {
+    font-size: 18px;
+  }
 
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 24px;
-  object-fit: cover;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  color: black;
-  border-radius: 24px;
-  overflow: hidden;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  transform: rotateY(180deg);
-  border-radius: 24px;
-  overflow: hidden;
-}
-  
   .container2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    align-items: stretch;
-    padding: 0 32px;
-    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
   }
-  
 
+  .flip-card {
+    max-width: 90%;
+    height: 250px;
+  }
+
+  .flip-card-back h1 {
+    font-size: 1.2rem;
+  }
+
+  .flip-card-back p {
+    font-size: 0.9rem;
+  }
+}
