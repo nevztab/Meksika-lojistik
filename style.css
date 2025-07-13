@@ -201,7 +201,11 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
     align-items: stretch;
+    padding: 0 32px;
+    box-sizing: border-box;
   }
   
 
