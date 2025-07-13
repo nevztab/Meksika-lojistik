@@ -1,8 +1,9 @@
 window.addEventListener('scroll', function () {
-  const header = document.querySelector('.header')
-  if (window.scrollY > 0) {
-    header.classList.add('scrolled')
+  const header = document.querySelector('.header');
+  if (!header) return;
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
   } else {
-    header.classList.remove('scrolled')
+    header.classList.remove('scrolled');
   }
-})
+});
