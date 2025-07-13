@@ -77,7 +77,6 @@ body {
   color: #40404073;
 }
 
-/* Main */
 main {
   flex: 1;
   position: relative;
@@ -93,7 +92,6 @@ main {
   text-shadow: 0 0 4px #000;
 }
 
-/* Footer */
 footer {
   color: #fff;
   text-align: center;
@@ -104,7 +102,6 @@ footer {
   z-index: 10;
 }
 
-/* Mobil uyum */
 @media (max-width: 600px) {
   .header {
     flex-direction: flex;
